@@ -1,8 +1,8 @@
 #Calculate the likelihood ratio----
-n<-13 #set total trials
-x<-8 #set successes
+n<-280 #set total trials
+x<-143 #set successes
 H0 <- .5 #specify one hypothesis you want to compare with the likihood ratio
-H1 <- 0/13 #specify another hypothesis you want to compare with the likihood ratio (you can use 1/20, or 0.05)
+H1 <- 0.52 #specify another hypothesis you want to compare with the likihood ratio (you can use 1/20, or 0.05)
 dbinom(x,n,H0)/dbinom(x,n,H1) #Returns the likelihood ratio of H0 over H1
 dbinom(x,n,H1)/dbinom(x,n,H0) #Returns the likelihood ratio of H1 over H0
 
@@ -17,6 +17,6 @@ segments(H1, dbinom(x,n,H1), x/n, dbinom(x,n,H1), lty=2, lwd=2)
 segments(x/n, dbinom(x,n,H0), x/n, dbinom(x,n,H1), lwd=2)
 title(paste('Likelihood Ratio H0/H1:',round(dbinom(x,n,H0)/dbinom(x,n,H1),digits=2)," Likelihood Ratio H1/H0:",round(dbinom(x,n,H1)/dbinom(x,n,H0),digits=2)))
 #dev.off()
-
+round(dbinom(x,n,H0)/dbinom(x,n,H1),digits=2)
 #© Daniel Lakens, 2016. 
 # This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. https://creativecommons.org/licenses/by-nc-sa/4.0/
