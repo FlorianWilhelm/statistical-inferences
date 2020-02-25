@@ -1,7 +1,7 @@
 N<-100 #total number of datapoints (per condition) you are willing to collect
 Looks<-5 #set number of looks at the data
 nSim<-50000 #number of simulated studies
-alpha<-0.0158 #set alpha
+alpha<-0.0158 #set alpha from https://en.wikipedia.org/wiki/Pocock_boundary
 
 D<-0 #True effect size (must be 0 when simulating Type 1 errors)
 
